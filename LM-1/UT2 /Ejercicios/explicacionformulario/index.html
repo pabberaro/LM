@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+
+    <script>
+        function pasaramayus(elemento) {
+            campo.value = campo.value.toUpperCase();
+            campo.style = "border: 1px"
+        }
+    </script>
+</head>
+<body>
+    <div style="width: 600px; margin: 0 auto;"></div>
+    <h2>formulario</h2>
+    <form action="registro.php" method="post">  <!-- action pagina destino formulario -->
+   <table>
+       <tr>
+           <td><label for="Nombre"> Nombre </label> </td>
+           <td><input type="text" name="Nombre" id="Nombre" placeholder="Nombre" value="Usuario"  onkeyup="pasaramayus(this)" onblur="quitarojo(this)" autofocus size="20" maxlength="10"></td>
+       </tr>
+       <tr>
+        <td>Apellido</td>
+        <td><input type="text" name="Apellido"></td>
+    </tr>
+    <tr>
+        <td><label for="password"> password </label></td>
+        <td><input type="password" name="password" id="password"></td>
+
+    </tr>
+    <tr>
+        <td> <input type="reset" value="No nomeborresporfavor"></td>
+        <td><input type="submit" value="enviar de locos"></td>
+        <td><input type="button" name="boton" id="boton" value="Ocultar" onclick="document.getElementById('Apellido').style='display: none'"></td>
+    </tr>
+    <tr>
+        <td><label for="pregunta">mini peka?</label></td>
+       
+        <td><input type="radio" name="pregunta" id="pregunta" value="si" checked><span>Si</span></td>
+        <td><input type="radio" name="pregunta" id="pregunta" value="no"><span>No</span></td>
+    </tr>
+    <tr>
+        <td><label for="aficiones"> aficiones</label></td>
+        <td>
+            <input type="checkbox" name="cine" id="cine" value="c" checked><span>Cine</span>
+            <input type="checkbox" name="deporte" id="deporte" value="d"><span>Deporte</span>
+            <input type="checkbox" name="musica" id="musica" value="m"><span>Musica</span>
+        </td>
+    </tr>
+
+    <tr>
+        <TD><label for="provincias">provincias</label></TD>
+        <td> <select name="provincias" id="provincias">
+      
+            <option value="-1"> Seleccione provincias</option>
+            <optgroup label="Zona centro">
+                <option value="12"> almeria</option>
+                <option value="31"> granada</option>
+            </optgroup>
+            <optgroup label="buenos dias">
+            <option  value="41" selected>Sevilla</option>
+            <option  value="39">cadiz</option>
+            <option  value="37">huelva</option>
+        </optgroup>
+        </select></td>
+    </tr>
+    <tr>
+        <td><label for="fichero">Foto</label></td>
+        <td><input type="file" name="fichero" id="fichero"></td>
+    </tr>
+    <tr>
+        <td><label for="desc">Descripccion</label></td>
+    <td>
+        <textarea name="Descripccion" id="desc" cols="50" rows="10" maxlength="500">Si
+
+        </textarea>
+    </td>
+</tr>
+<tr>
+    <td><label for="edad">edad</label></td>
+    <td><input type="number" name="edad" id="edad" maxlength="4" step="1" max="10" min="0"></td>
+</tr>
+<tr>
+    <td><label for="email">email</label></td>
+    <td><input type="email" name="email" id="email" required></td>
+    <td><input type="url" name="web" id="web" value="http://"></td>
+    <td><input type="search" name="busqueda" id="busqueda"></td>
+    <td><input type="tel" name="tlfn" id="tlfn"></td>
+</tr>
+   </table>
+
+    </form>
+</body>
+</html>
